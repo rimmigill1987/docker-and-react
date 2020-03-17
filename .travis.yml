@@ -6,4 +6,6 @@ before_install:
   - docker build -t rimmigill/docker-and-react -f Dockerfile.dev .
 
 script:
-  - docker run rimmigill/docker-and-react npm run test -- --coverage
+  - docker run -e CI=true  rimmigill/docker-react-test2 npm run test
+
+language: generic
