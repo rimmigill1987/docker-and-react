@@ -3,9 +3,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t rimmigill/docker-and-react -f Dockerfile.dev .
+  - docker build -t rimmigill/docker-and-react1 -f Dockerfile.dev .
 
 script:
-  - docker run -e CI=true  rimmigill/docker-react-test2 npm run test
-
-language: generic
+  - docker run -e CI=true  rimmigill/docker-and-react1 npm run test
